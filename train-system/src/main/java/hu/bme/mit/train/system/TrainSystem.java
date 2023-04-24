@@ -10,14 +10,6 @@ import hu.bme.mit.train.interfaces.TrainUser;
 import hu.bme.mit.train.sensor.TrainSensorImpl;
 import hu.bme.mit.train.user.TrainUserImpl;
 
-public class RunTrain extends TimerTask{
-	public TrainController controller;
-	public void run(){
-		if(controller == null) throw new Exception("Controller can't be null");
-		controller.followSpeed();
-	}
-}
-
 public class TrainSystem {
 
 	private TrainController controller = new TrainControllerImpl();
