@@ -24,6 +24,12 @@ public class TrainSystem {
 		t.schedule(task, 1000);
 	}
 
+	public TrainSystem(){
+		RunnableImpl r = new RunnableImpl(controller);
+		Thread t1 = new Thread(r);
+		t1.start();
+	}
+	
 	public TrainController getController() {
 		return controller;
 	}
